@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CART PAGE</title>
+</head>
+<style>
+    #navbar {
+        width: 100%;
+        height: 70px;
+        display: flex;
+        border: 1px solid rgb(222, 219, 219);
+    }
+
+    #navbar>div:nth-child(1)>img {
+        width: 100px;
+        height: 55px;
+        margin-top: 8px;
+    }
+
+    #navbar>div:nth-child(2) {
+        display: flex;
+        height: 40px;
+        width: 20%;
+        justify-content: space-between;
+        margin-left: 500px;
+        margin-top: 10px;
+    }
+
+    #navbar>div:nth-child(3) {
+        margin-top: 10px;
+        display: flex;
+        /* text/box-shadow: -2px 0 black,0 1px black, 1px 0 black, 0 -1px black; */
+    }
+
+    #navbar>div:nth-child(3)>img {
+        margin-left: 380px;
+        margin-top: 10px;
+    }
+
+    #navbar>div:nth-child(3)>p {
+        margin-top: 16px;
+    }
+
+    #body {
+        width: 70%;
+        height: 500px;
+        display: flex;
+        margin: auto;
+    }
+
+    #leftside {
+        width: 55%;
+        height: auto;
+    }
+
+    #leftside>div:nth-child(1) {
+        display: flex;
+        width: 500px;
+        margin-top: 40px;
+        margin-left: 35px;
+        border: 1px solid rgb(222, 219, 219);
+        height: 60px;
+    }
+
+    #leftside>div:nth-child(1)>p {
+        font-family: Arial, Helvetica, sans-serif;
+        margin-left: 5px;
+        font-size: 14px;
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    #leftside>div:nth-child(1)>button {
+        text-align: center;
+        border: 1px solid red;
+        color: red;
+        margin-left: 170px;
+        background-color: white;
+        height: 33px;
+        margin-top: 13px;
+        width: 130px;
+    }
+
+    #leftside>div:nth-child(1)>button:hover {
+        background-color: rgb(249, 204, 211);
+    }
+
+    #leftside>div:nth-child(2) {
+        width: 500px;
+        margin-top: 25px;
+        margin-left: 35px;
+        border: 1px solid rgb(222, 219, 219);
+        height: 100px;
+    }
+
+    #leftside>div:nth-child(2)>h4 {
+        margin-left: 30px;
+        margin-top: 10px;
+    }
+
+    #leftside>div:nth-child(2)>p {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 13px;
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    #leftside>div:nth-child(2)>BUTTON {
+        color: red;
+        height: 20px;
+        margin-left: 30px;
+        border: none;
+        background-color: white;
+    }
+
+    #rightSide {
+        width: 35%;
+        height: 800px;
+        border: 1px solid rgb(222, 219, 219);
+    }
+
+    #rightSide>p {
+        margin-left: 10px;
+        font-weight: 575;
+        margin-top: 30px;
+        color: grey;
+    }
+
+    #rightSide>div:nth-child(2) {
+        display: flex;
+
+    }
+
+    #rightSide>div:nth-child(2)>p {
+        font-weight: bold;
+        margin-left: 5px;
+        margin-top: 10px;
+    }
+
+    #rightSide>div:nth-child(2)>button {
+        height: 25px;
+        background-color: white;
+        text-align: center;
+        border: 1px solid red;
+        color: red;
+        margin-left: 160px;
+        margin-top: 6px;
+    }
+
+    #rightSide>div:nth-child(3) {
+        margin-top: 5px;
+    }
+
+    #rightSide>div:nth-child(3)>span>a {
+        color: rgb(247, 64, 64);
+        margin-left: 40px;
+        text-decoration: none;
+    }
+
+    #rightSide>div:nth-child(3)>p {
+        margin-left: 10px;
+        margin-top: 30px;
+        font-weight: bold;
+        color: rgb(124, 124, 124);
+    }
+
+    #rightSide>input {
+        margin-left: 10px;
+    }
+</style>
+<script>
+    window.onload = function () {
+        var isLoggedIn = JSON.parse(localStorage.getItem("Is User Log-in"));
+        console.log(isLoggedIn);
+
+        if (isLoggedIn == true) {
+            alert("Welcome!");
+            const allProducts = JSON.parse(localStorage.getItem("allProducts"));
+            console.log(allProducts);
+            var leftcart = document.getElementById("leftcart");
+            var rightSide=document.getElementById("rightSide")
+            var rightDivTotalPrice=document.createElement("div")
+           var totalPrice=0;
+            for (var i = 0; i < allProducts.length; i++) {
+                console.log(allProducts[i]);
+
+                const innerDiv = document.createElement("div");
+                innerDiv.style.display = "flex";
+
+                var leftDiv = document.createElement("div");
+
+                var rightDiv = document.createElement("div");
+                rightDiv.style.marginLeft = "10px";
+
+                var img = document.createElement("img");
+                img.src = allProducts[i].pI;
+                img.style.width = "100px";
+                img.style.height = "100px";
+                img.style.marginLeft="35px";
+                img.style.marginTop="10px"
+                leftDiv.append(img);
+
+                var name = document.createElement("p");
+                name.innerText = allProducts[i].pN;
+                rightDiv.append(name);
+
+                var price = document.createElement("p");
+                price.innerText = allProducts[i].pP;
+                totalPrice=totalPrice +Number(allProducts[i].pP) ;
+                rightDiv.append(price);
+
+                innerDiv.append(leftDiv);
+                innerDiv.append(rightDiv);
+
+
+
+                leftcart.append(innerDiv);
+               
+            }
+            rightDivTotalPrice.append(totalPrice) ;
+            rightSide.append(rightDivTotalPrice);
+            // console.log(totalPrice);
+
+        }else {
+        alert("login first")}
+
+
+
+        }
+
+
+
+
+</script>
+
+
+
+<body>
+    <div id="navbar">
+        <div>
+            <img src="https://images.indianexpress.com/2021/01/myntra.png" alt="logo">
+        </div>
+        <div>
+            <p>BAG</p>
+            <P>ADDRESS</P>
+            <P>PAYMENT</P>
+        </div>
+        <div>
+            <img src="https://constant.myntassets.com/checkout/assets/img/sprite-secure.png" width="26" height="28" />
+            <p>100% SECURE</p>
+
+        </div>
+    </div>
+    <div id="body">
+        <div id="leftside">
+            <div>
+                <p>Check delivery time & services</p>
+                <button>ENTER PIN CODE</button>
+
+            </div>
+            <div>
+                <h4>Available Offers</h4>
+                <p>Get up to Rs.500 Cashback on CRED Pay UPI on a min spend of Rs.1000 TCA</p>
+                <button>+SHOW MORE</button>
+            </div>
+            <div id="leftcart">
+                <div id="leftDiv"></div>
+                <div id="rightDiv"></div>
+            </div>
+
+
+
+        </div>
+        <div id="rightSide">
+            <p>COUPONS</p>
+            <div>
+                <p>Apply Coupons</p>
+                <button>APPLY</button>
+            </div>
+            <div>
+                <span><a href="./login.html">Login</a> to get upto $200 OFF on first order </span>
+                <br>
+
+                <p>Support Transformative Social Work In India</p>
+            </div>
+            <input type="checkbox" /><span>SUPPORT US</span>
+
+
+        </div>
+
+    </div>
+    <script src="./server.js"></script>
+</body>
+
+</html>

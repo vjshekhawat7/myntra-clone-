@@ -1,0 +1,11 @@
+var number1=89;
+var number2=45;
+var number3="10";
+console.log(typeof(number1));
+console.log(number3);
+console.log(typeof(number3));
+console.log(number1+number2);
+console.log(number1+number2+number3);
+console.log(number2+number3);
+console.log(number3+number1+number2);
+console.log(Number(number3)+number1+number2);

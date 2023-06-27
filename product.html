@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/54841cf2a3.js" crossorigin="anonymous"></script>
+</head>
+<style>
+    #navbar {
+        width: 100%;
+        height: 80px;
+        display: flex;
+        border: 1px outset white;
+    }
+
+    #navbar>img {
+        height: 60px;
+        width: 120px;
+        margin-left: 20px;
+        margin-top: 10px;
+    }
+
+    #specific {
+        display: flex;
+        height: 80px;
+        width: 40%;
+        justify-content: space-between;
+        margin-left: 60px;
+        margin-top: 8px;
+    }
+
+    #specific>p>a {
+        color: black;
+        text-decoration: none;
+    }
+
+    #specific>p {
+        font-weight: bold;
+    }
+
+    #navbar>input {
+        width: 400px;
+        height: 30px;
+        margin-top: 15px;
+        margin-left: 40px;
+        padding-left: 10px;
+        border-radius: 5px;
+        border: 1px solid black;
+    }
+
+    #screen {
+        margin-top: -10px;
+    }
+
+    #icon1 {
+        margin-left: 50px;
+
+    }
+
+    #icon1>i {
+        margin-top: 19px;
+        margin-left: 10px;
+    }
+
+    #icon1>p {
+        margin-top: -2px;
+    }
+
+    #icon2 {
+        margin-left: 30px;
+    }
+
+    #icon2>i {
+        margin-top: 19px;
+        margin-left: 8px;
+    }
+
+    #icon2>p {
+        margin-top: -2px;
+    }
+
+    #icon3 {
+        margin-left: 30px;
+    }
+
+    #icon3>p>a {
+        text-decoration: none;
+        color: black;
+    }
+
+    #icon3>i {
+        margin-top: 19px;
+        margin-left: 5px;
+    }
+
+    #icon3>p {
+        margin-top: -2px;
+    }
+
+    #screen>h2 {
+        margin-bottom: 50px;
+    }
+
+    #screen>div:nth-child(2) {
+        display: flex;
+        border: 1px solid grey;
+        width: 100%;
+    }
+
+    #leftside {
+        width: 18%;
+        border: 1px solid grey;
+    }
+
+    #leftside>div:nth-child(1) {
+        margin-left: 10px;
+        margin-top: 20px;
+    }
+
+    #leftside>div>label {
+        font-weight: bold;
+        font-size: 14px;
+    }
+
+    #leftside>div>label>input {
+        font-weight: bold;
+        font-size: 14px;
+        margin-bottom: 10px;
+    }
+
+    #leftside>div:nth-child(2) {
+        margin-left: 10px;
+        margin-top: 20px;
+    }
+
+    #leftside>div:nth-child(2)>p {
+        font-weight: bold;
+        font-size: large;
+    }
+
+    #leftside>div:nth-child(2)>input {
+        margin-bottom: 10px;
+    }
+
+    #leftside>div:nth-child(2)>button {
+        color: red;
+        margin-left: 15px;
+        margin-top: 5px;
+        background-color: white;
+        border: none;
+    }
+
+    #leftside>div:nth-child(3) {
+        margin-left: 10px;
+        margin-top: 20px;
+    }
+
+    #leftside>div:nth-child(3)>p {
+        font-weight: bold;
+        font-size: large;
+    }
+
+    #leftside>div:nth-child(3)>input {
+        margin-bottom: 10px;
+    }
+
+    #leftside>div:nth-child(4) {
+        margin-left: 10px;
+        margin-top: 20px;
+    }
+
+    #leftside>div:nth-child(4)>p {
+        font-weight: bold;
+        font-size: large;
+    }
+
+    #leftside>div:nth-child(4)>input {
+        margin-bottom: 10px;
+    }
+
+    #leftside>div:nth-child(5) {
+        margin-left: 10px;
+        margin-top: 20px;
+    }
+
+    #leftside>div:nth-child(5)>p {
+        font-weight: bold;
+        font-size: large;
+    }
+
+    #leftside>div:nth-child(5)>input {
+        margin-bottom: 10px;
+    }
+
+    #leftside>div:nth-child(5)>button {
+        color: red;
+        margin-left: 15px;
+        margin-top: 5px;
+        background-color: white;
+        border: none;
+    }
+
+    #rightside {
+        width: 80%;
+    }
+
+    #products {
+        width: 98%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    #products>div {
+        display: flex;
+        width: 100%;
+        height: 340px;
+    }
+
+    #products>div>div {
+        width: 16%;
+        margin: auto;
+        height: 330px;
+    }
+
+    #products>div>div>img {
+        width: 100%;
+        margin: auto;
+        height: 240px;
+    }
+
+    #products>div>div>div {
+        height: 80px;
+        width: 80%;
+        max-width: auto;
+        margin: auto;
+    }
+
+    #products>div>div>div>p {
+        font-size: 13px;
+        margin-bottom: 4px;
+        margin-top: 0;
+        margin-left: 4px;
+    }
+
+    #products>div>div>div>button {
+        height: 20px;
+        width: 100px;
+        margin-left: 9px;
+        background-color: antiquewhite;
+        border: 1px solid rgb(166, 162, 162);
+        border-radius: 5px;
+    }
+
+    #footer {
+        width: 70%;
+        height: 500px;
+        margin: auto;
+        display: flex;
+        margin-top: 40px;
+    }
+
+    #footer>div {
+        width: 30%;
+    }
+
+    #footer>div>ul>li {
+        color: grey;
+    }
+</style>
+
+<body>
+    <div id="navbar">
+        <img src="https://images.indianexpress.com/2021/01/myntra.png" alt="logo">
+        <div id="specific">
+            <p>MEN</p>
+            <p>WOMEN</p>
+            <p>KIDS</p>
+            <p>HOME&LIVING </p>
+            <p>BEAUTY</p>
+            <p>STUDIO</p>
+        </div>
+        <input type="text" id="ifeild" placeholder="Search for products,brands and more" />
+        <div id="icon1">
+            <i class="fa-regular fa-user"></i>
+            <p>profile</p>
+        </div>
+        <div id="icon2">
+            <i class="fa-regular fa-heart"></i>
+            <p>Wishlist</p>
+        </div>
+        <div id="icon3">
+            <i class="fa-solid fa-briefcase"></i>
+            <p><a href="./cart.html"> Bag</a></p>
+        </div>
+    </div>
+    <div id="screen">
+        <div>
+            <p>Home/clothing/kurtis</p>
+            <p>kurtis-2367 items</p>
+            <h2>FILTER</h2>
+        </div>
+        <div>
+            <div id="leftside">
+                <div>
+                    <label>
+                        <input type="radio" name="men" />MEN
+                    </label><br>
+                    <label>
+                        <input type="radio" name="women" />WOMEN
+                    </label><br>
+                    <label>
+                        <input type="radio" name="boys" />BOYS
+                    </label><br>
+                    <label>
+                        <input type="radio" name="girls" />GIRLS
+                    </label><br>
+                </div>
+                <div>
+                    <p>Brands</p>
+                    <input type="checkbox" /><span>ADA(198)</span><br>
+                    <input type="checkbox" /><span>MALHAR(172)</span><br>
+                    <input type="checkbox" /><span>SAREE SWARG(147)</span><br>
+                    <input type="checkbox" /><span>HERE&NOW(103)</span><br>
+                    <input type="checkbox" /><span>PARAMOUNT CHIKAN(70)</span><br>
+                    <input type="checkbox" /><span>PISTA(66)</span><br>
+                    <input type="checkbox" /><span>SANGRIA(62)</span><br>
+                    <input type="checkbox" /><span>Anubutee(61)</span><br>
+                    <button>+238 more</button>
+                </div>
+                <div>
+                    <p>Price</p>
+                    <input type="checkbox" /><span>Rs.269 TO Rs.599</span><br>
+                    <input type="checkbox" /><span>Rs.599 TO Rs.999</span><br>
+                    <input type="checkbox" /><span>Rs.999 TO Rs.1499</span><br>
+                    <input type="checkbox" /><span>Rs.1499 TO Rs.1999</span><br>
+                    <input type="checkbox" /><span>Rs.1999 TO Rs.2149</span><br>
+                    <input type="checkbox" /><span>Rs.2149 TO Rs.3999</span><br>
+                    <input type="checkbox" /><span>Rs.3999 TO Rs.4149</span><br>
+                    <input type="checkbox" /><span>Rs.4149 TO Rs.6599</span><br>
+                </div>
+                <div>
+                    <p>Discount Range</p>
+                    <input type="radio" /><span>10% and Above</span><br>
+                    <input type="radio" /><span>20% and Above</span><br>
+                    <input type="radio" /><span>30% and Above</span><br>
+                    <input type="radio" /><span>40% and Above</span><br>
+                    <input type="radio" /><span>50% and Above</span><br>
+                    <input type="radio" /><span>60% and Above</span><br>
+                    <input type="radio" /><span>70% and Above</span><br>
+                    <input type="radio" /><span>80% and Above</span><br>
+                </div>
+                <div>
+                    <p>Color</p>
+
+                    <input type="checkbox" /><span>White</span><br>
+                    <input type="checkbox" /><span>Green</span><br>
+                    <input type="checkbox" /><span>Red</span><br>
+                    <input type="checkbox" /><span>Blue</span><br>
+                    <input type="checkbox" /><span>Black</span><br>
+                    <input type="checkbox" /><span>Violet</span><br>
+                    <input type="checkbox" /><span>Purple</span><br>
+                    <input type="checkbox" /><span>Orange</span><br>
+                    <button>+38 more</button>
+                </div>
+            </div>
+            <div id="rightside">
+                <div id="products">
+                    <div>
+                        <div id="lineoneone">
+                            <img
+                                src="https://assets.myntassets.com/h_720,q_90,w_540/v1/assets/images/17413232/2022/3/17/c861897a-f6d5-40fc-8336-a007cce0bede1647511510301-Anubhutee-Women-Kurtis-6081647511509773-1.jpg" />
+                            <div>
+                                <p>Anubhutee</p>
+                                <p>Ethanic Printed Kurti</p>
+                                <p>599</p>
+                                <button onclick="addToCart(lineoneone)">Add to Cart</button>
+                            </div>
+                        </div>
+
+                        <div id="lineonetwo">
+                            <img
+                                src="https://assets.myntassets.com/h_720,q_90,w_540/v1/assets/images/15956980/2021/11/15/9574a6c9-8634-4381-88eb-d9e1783a374c1636970469424WomenGreenCottonkurtaShararaDupattaSetKurtaSetsGinniAroraLab1.jpg" />
+                            <div>
+                                <p>Shae by SASSAFRAS</p>
+                                <p>Velvet Kurti</p>
+                                <p>799</p>
+                                <button onclick="addToCart(lineonetwo)">Add to Cart</button>
+                            </div>
+                        </div>
+                        <div id="lineonethree">
+                            <img
+                                src="https://assets.myntassets.com/h_720,q_90,w_540/v1/assets/images/20934284/2022/11/27/8afce494-b39f-4111-82f5-f6e8c353897d1669496796817Kurtis1.jpg" />
+                            <div>
+                                <p>Rain & Rainbow</p>
+                                <p>Floral Printed Kurti</p>
+                                <p>799</p>
+                                <button onclick="addToCart(lineonethree)">Add to Cart</button>
+                            </div>
+                        </div>
+                        <div id="lineonefour">
+                            <img
+                                src="https://assets.myntassets.com/h_720,q_90,w_540/v1/assets/images/15956892/2021/11/15/89117d04-d4ec-47fe-8108-32d5e3f9bd011636970449436WomenGreenCottonkurtaShararaDupattaSetKurtaSetsGinniAroraLab1.jpg" />
+                            <div>
+                                <p>Shae by SASSAFRAS</p>
+                                <p>Embroidered kurti</p>
+                                <p>899</p>
+                                <button onclick="addToCart(lineonefour)">Add to Cart</button>
+                            </div>
+                        </div>
+                        <div id="lineonefive">
+                            <img
+                                src=https://assets.myntassets.com/h_720,q_90,w_540/v1/assets/images/17413170/2022/3/17/242de342-07f7-4344-b423-270927e85ee41647511495979-Anubhutee-Women-Kurtis-6331647511495433-1.jpg />
+                            <div>
+                                <p>HERE&NOW</p>
+                                <p>Embroidered kurt</p>
+                                <p>999</p>
+                                <button onclick="addToCart(lineonefive)">Add to Cart</button>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div>
+                        <div id="linetwoone">
+                            <img
+                                src="https://assets.myntassets.com/h_720,q_90,w_540/v1/assets/images/16777048/2022/1/11/e7e458a3-f230-4d78-9f4b-b15ab7bd74f21641893640534Kurtis1.jpg" />
+                            <div>
+                                <p>Ava Clothing</p>
+                                <p>Floral Kurti</p>
+                                <p>599</p>
+                                <button onclick="addToCart(linetwoone)"> Add to Cart</button>
+                            </div>
+                        </div>
+                        <div id="linetwotwo">
+                            <img
+                                src="https://assets.myntassets.com/h_720,q_90,w_540/v1/assets/images/18197970/2022/5/9/e90056e9-7128-4874-a67f-d64ef1ee06ed1652081627006ZNXClothingWomenMaroonFlaredSleevesCrepeKaftanKurta1.jpg" />
+                            <div>
+                                <p>HERE&NOW</p>
+                                <p> Printed Kurti</p>
+                                <p>1599</p>
+                                <button onclick="addToCart(linetwotwo)">Add to Cart</button>
+                            </div>
+                        </div>
+                        <div id="linetwothree">
+                            <img
+                                src="https://assets.myntassets.com/h_720,q_90,w_540/v1/assets/images/16332186/2021/12/1/b8ffa12c-cf76-4f6f-bac0-e9a6f0e2fecc1638375493371AnubhuteeWomenMauve-ColouredSilver-ColouredEthnicMotifPrinte1.jpg" />
+                            <div>
+                                <p>Anubhutee</p>
+                                <p>Ethanic Printed Kurti</p>
+                                <p>1499</p>
+                                <button onclick="addToCart(linetwothree)">Add to Cart</button>
+                            </div>
+                        </div>
+                        <div id="linetwofour">
+                            <img
+                                src="https://assets.myntassets.com/h_720,q_90,w_540/v1/assets/images/16190886/2022/2/11/f176ca10-edf4-467a-b54c-2eded2ee01881644558425644-Anouk-Women-Kurtis-8361644558425043-1.jpg" />
+                            <div>
+                                <p>ZARA</p>
+                                <p>Velvet Kurti</p>
+                                <p>1399</p>
+                                <button onclick="addToCart(linetwofour)">Add to Cart</button>
+                            </div>
+                        </div>
+                        <div id="linetwofive">
+                            <img
+                                src="https://assets.myntassets.com/h_720,q_90,w_540/v1/assets/images/6540132/2022/2/3/a8a026e1-01c1-4c82-bd87-baf2f0fdf2651643885682083-GERUA-Mustard-Yellow--Red-Empire-A-Line-Pure-Cotton-Kurti-79-1.jpg" />
+                            <div>
+                                <p>MALHAR</p>
+                                <p>Plane Kurti</p>
+                                <p>1699</p>
+                                <button onclick="addToCart(linetwofive)">Add to Cart</button>
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div>
+                        <div>
+                            <img
+                                src="https://assets.myntassets.com/h_720,q_90,w_540/v1/assets/images/16872740/2022/2/11/6ee82ffe-e378-4c05-a707-2cd745cd0e4a1644577567331-Libas-Women-Kurtis-121644577566648-1.jpg" />
+                            <div>
+                                <p>Anubhutee</p>
+                                <p>Ethanic Printed Kurti</p>
+                                <p>599</p>
+                                <button>Add to Cart</button>
+                            </div>
+                        </div>
+                        <div>
+                            <img
+                                src="https://assets.myntassets.com/h_720,q_90,w_540/v1/assets/images/20935742/2022/11/30/a884d905-0b86-4c98-9eb9-13a6fef7caea1669797333181-Libas-Women-Kurtis-4481669797332626-1.jpg" />
+                            <div>
+                                <p>ZARA</p>
+                                <p>Floral Printed Kurti</p>
+                                <p>1599</p>
+                                <button>Add to Cart</button>
+                            </div>
+                        </div>
+                        <div>
+                            <img
+                                src="https://assets.myntassets.com/h_720,q_90,w_540/v1/assets/images/20925176/2022/11/26/d20b3b95-a421-4d7a-9ceb-e961e339222e1669443804277FabindiaBlueCottonPrintedKurti1.jpg" />
+                            <div>
+                                <p>Anubhutee</p>
+                                <p>Motifs Printed Kurti</p>
+                                <p>799</p>
+                                <button>Add to Cart</button>
+                            </div>
+                        </div>
+                        <div>
+                            <img
+                                src="https://assets.myntassets.com/h_720,q_90,w_540/v1/assets/images/15956982/2021/11/15/3eec6cdc-d223-4ffa-b60e-ca08e894fdfe1636970475498WomenGreenCottonkurtaShararaDupattaSetKurtaSetsGinniAroraLab1.jpg" />
+                            <div>
+                                <p>Anubhutee</p>
+                                <p>Ethanic Printed Kurti</p>
+                                <p>799</p>
+                                <button>Add to Cart</button>
+                            </div>
+                        </div>
+                        <div>
+                            <img
+                                src="https://assets.myntassets.com/h_720,q_90,w_540/v1/assets/images/16887874/2022/1/20/50d9dc98-198d-44e1-a1fb-7dc0f54777741642676218322TANKHIWomenRed1.jpg" />
+                            <div>
+                                <p>HERE&NOW</p>
+                                <p>Ethanic Printed Kurti</p>
+                                <p>999</p>
+                                <button>Add to Cart</button>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div>
+                        <div>
+                            <img
+                                src="https://assets.myntassets.com/h_720,q_90,w_540/v1/assets/images/11535124/2022/6/1/6afaaa54-e87e-42a6-842e-551d1fd09fac1654088381643AnubhuteeWomenBlackGoldenPrintedStraightKurti1.jpg" />
+                            <div>
+                                <p>Saree Swarg</p>
+                                <p>Pure Cotton Kurti</p>
+                                <p>599</p>
+                                <button>Add to Cart</button>
+                            </div>
+                        </div>
+                        <div>
+                            <img
+                                src="https://assets.myntassets.com/h_720,q_90,w_540/v1/assets/images/15635874/2021/10/13/416264d4-ad61-49e7-b5a4-7d709bed6dc91634120821480-SWAGG-INDIA-Womens-Wear-Chikan-Embroidery-Polycotton-Sky-Blu-1.jpg" />
+                            <div>
+                                <p>ADA</p>
+                                <p>Motifs Kurti</p>
+                                <p>499</p>
+                                <button>Add to Cart</button>
+                            </div>
+                        </div>
+                        <div>
+                            <img
+                                src="https://assets.myntassets.com/h_720,q_90,w_540/v1/assets/images/15887156/2022/8/26/9f1163cc-c65c-4edd-af60-88b08b329a701661518339153HERENOWGreyWhiteEthnicMotifsPrintPureCottonKurti1.jpg" />
+                            <div>
+                                <p>Anubhutee</p>
+                                <p>Ethanic Printed Kurti</p>
+                                <p>699</p>
+                                <button>Add to Cart</button>
+                            </div>
+                        </div>
+                        <div>
+                            <img
+                                src="https://assets.myntassets.com/h_720,q_90,w_540/v1/assets/images/15635994/2022/2/22/3f1e6ddd-9ce5-42b3-87c6-242c55f97ea41645512972173AnubhuteeWomenPinkWhiteFloralPrintedStraightKurti1.jpg" />
+                            <div>
+                                <p>MALHAR</p>
+                                <p>Floral Printed Kurti</p>
+                                <p>899</p>
+                                <button>Add to Cart</button>
+                            </div>
+                        </div>
+                        <div>
+                            <img
+                                src="https://assets.myntassets.com/h_720,q_90,w_540/v1/assets/images/17253066/2022/3/9/8806c830-1267-4777-9c61-4b390c59509c1646821040588-Aarika-Women-Kurtis-911646821039918-1.jpg" />
+                            <div>
+                                <p>Anouk</p>
+                                <p>Cotton Kurti</p>
+                                <p>999</p>
+                                <button>Add to Cart</button>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div>
+                        <div>
+                            <img
+                                src="https://assets.myntassets.com/h_720,q_90,w_540/v1/assets/images/17606372/2022/12/6/5b7bc6e1-bc01-4c94-b2c5-bf204356fe8d1670297847574RainRainbowWomenGreenOrangeEthnicPrintedSequinnedPureCottonK1.jpg" />
+                            <div>
+                                <p>Anubhutee</p>
+                                <p>Ethanic Printed Kurti</p>
+                                <p>699</p>
+                                <button>Add to Cart</button>
+                            </div>
+                        </div>
+                        <div>
+                            <img
+                                src="https://assets.myntassets.com/h_720,q_90,w_540/v1/assets/images/17156576/2022/3/2/80c8ec27-f5b1-40be-99ec-c1c980961e081646217479254MALHAARWomenCambricPrintedShortKurti1.jpg">
+                            <div>
+                                <p>Znx Clothing</p>
+                                <p>Motifs Printed Kurti</p>
+                                <p>699</p>
+                                <button>Add to Cart</button>
+                            </div>
+                        </div>
+                        <div>
+                            <img
+                                src="https://assets.myntassets.com/h_720,q_90,w_540/v1/assets/images/12037936/2020/8/11/7f0ad4d1-b872-4ffb-bf8c-feda7b2bdc111597145805750-HERENOW-Women-Beige--White-Embroidered-A-Line-Kurti-19115971-1.jpg" />
+                            <div>
+                                <p>Anouk</p>
+                                <p>Pure Cotton Kurti</p>
+                                <p>799</p>
+                                <button>Add to Cart</button>
+                            </div>
+                        </div>
+                        <div>
+                            <img
+                                src="https://assets.myntassets.com/h_720,q_90,w_540/v1/assets/images/19791536/2022/12/6/a58bfef4-05ac-4c27-9d39-17073c7757171670314799026RainRainbowRustMustardYellowPrintedPureCottonKurti1.jpg" />
+                            <div>
+                                <p>Pistaa</p>
+                                <p>Floral Kurti</p>
+                                <p>999</p>
+                                <button>Add to Cart</button>
+                            </div>
+                        </div>
+                        <div>
+                            <img
+                                src="https://assets.myntassets.com/h_720,q_90,w_540/v1/assets/images/productimage/2019/8/6/71654520-160a-4de3-a7d5-309c609231d71565093004223-1.jpg" />
+                            <div>
+                                <p>ZARA</p>
+                                <p>Floral Printed Kurti</p>
+                                <p>499</p>
+                                <button>Add to Cart</button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="footer">
+        <div>
+            <b>ONLINE SHOPPING</b>
+            <ul>
+                <li>Men</li>
+                <li>Women</li>
+                <li>Home & Living</li>
+                <li>Kids</li>
+                <li>Beauty</li>
+                <li>Gift and Cards</li>
+                <li>Myntra Insider</li>
+            </ul>
+        </div>
+        <div>
+            <b>CUSTOMER POLICIES</b>
+            <ul>
+                <li>Contact Us</li>
+                <li>T&C</li>
+                <li>FAQ</li>
+                <li>Terms Of Use</li>
+                <li>Shipping</li>
+                <li>Cancelation</li>
+                <li>Return</li>
+                <li>Privacy Policy</li>
+                <li>Track Orders</li>
+
+            </ul>
+        </div>
+        <div>
+            <b>USEFUL LINK</b>
+            <ul>
+                <li>Blog</li>
+                <li>Career</li>
+                <li>Site Map</li>
+                <li>Corporate</li>
+                <li>Whitehat</li>
+            </ul>
+        </div>
+
+
+
+
+
+
+
+
+
+    </div>
+    <script src="./server.js"></script>
+</body>
+
+</html>

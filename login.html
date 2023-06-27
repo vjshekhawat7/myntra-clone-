@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log-in Page</title>
+    <style>
+        body {
+            width: 30%;
+            height: 400px;
+            margin-left: 40%;
+        }
+
+        div {
+            text-align: center;
+            background-color: rgb(171, 243, 243);
+            width: 70%;
+            height: 350px;
+        }
+
+        h1 {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            margin-top: 150px;
+            padding-top: 60px;
+        }
+
+        div>input {
+            height: 30px;
+            width: 200px;
+            margin-bottom: 20px;
+            text-align: center;
+            background-color: aliceblue;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-weight: bold;
+        }
+
+        button {
+            height: 30px;
+            width: 90px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-weight: bold;
+            background-color: beige;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h1>Log-in Page</h1>
+        <input type="text" id="email2" placeholder="Enter your Email" /><br>
+        <input type="password" id="password2" placeholder="Enter your Password" /><br>
+        <button ondblclick="login()">Log-in</button>
+        <button><a href="./register.html">Register</a></button>
+    </div>
+    <script src="./server.js"></script>
+</body>
+
+</html>
