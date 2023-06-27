@@ -1,1 +1,1 @@
-# project1-myntra-clone
+# myntra-clone
